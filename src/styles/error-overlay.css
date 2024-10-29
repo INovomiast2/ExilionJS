@@ -1,0 +1,31 @@
+@keyframes errorSlideIn {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes errorPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
+
+.exilon-error-overlay {
+  animation: errorSlideIn 0.3s ease-out;
+}
+
+.exilon-error-card {
+  animation: errorPulse 2s infinite;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1),
+              0 5px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.exilon-error-code {
+  font-family: 'Fira Code', monospace;
+  text-shadow: 0 0 10px rgba(239, 68, 68, 0.5);
+}
