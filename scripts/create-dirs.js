@@ -6,10 +6,10 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const projectRoot = path.join(__dirname, '..');
 
 const dirs = [
-  '.exilon',
-  '.exilon/css',
-  '.exilon/assets',
-  '.exilon/js'
+  'dist',
+  'dist/css',
+  'dist/assets',
+  'dist/js'
 ];
 
 dirs.forEach(dir => {

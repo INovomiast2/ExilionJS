@@ -12,7 +12,7 @@ export default {
   mode: isDevelopment ? 'development' : 'production',
   entry: './src/index.tsx',
   output: {
-    path: path.resolve(__dirname, '.exilon'),
+    path: path.resolve(__dirname, 'dist'),
     filename: 'js/[name].[contenthash].js',
     publicPath: '/',
     clean: true,
@@ -93,17 +93,17 @@ export default {
       patterns: [
         { 
           from: path.resolve(__dirname, 'src/styles'),
-          to: path.resolve(__dirname, '.exilon/css'),
+          to: path.resolve(__dirname, 'dist/css'),
           noErrorOnMissing: true
         },
         {
           from: path.resolve(__dirname, 'src/assets'),
-          to: path.resolve(__dirname, '.exilon/assets'),
+          to: path.resolve(__dirname, 'dist/assets'),
           noErrorOnMissing: true
         },
         {
           from: path.resolve(__dirname, 'public'),
-          to: path.resolve(__dirname, '.exilon'),
+          to: path.resolve(__dirname, 'dist'),
           noErrorOnMissing: true,
           globOptions: {
             ignore: ['**/index.html'],
@@ -117,7 +117,7 @@ export default {
       favicon: './public/favicon.png'
     }),
     new MiniCssExtractPlugin({
-      filename: 'css/styles.css',
+      filename: 'css/[name].[contenthash].css',
     }),
     new ExilonWebpackPlugin()
   ],
@@ -126,7 +126,7 @@ export default {
     hot: true,
     port: 3000,
     static: {
-      directory: path.join(__dirname, '.exilon'),
+      directory: path.join(__dirname, 'dist'),
       watch: true,
     },
     client: {
