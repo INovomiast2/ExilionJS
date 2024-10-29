@@ -15,7 +15,7 @@
         "isolatedModules": true,
         "noEmit": false,
         "jsx": "react-jsx",
-        "outDir": "./.exilon/js",
+        "outDir": "./dist/js",
         "baseUrl": "src",
         "paths": {
             "@/*": ["*"],

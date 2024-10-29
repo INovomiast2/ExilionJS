@@ -91,11 +91,6 @@ export default {
     }),
     new CopyPlugin({
       patterns: [
-        { 
-          from: path.resolve(__dirname, 'src/styles'),
-          to: path.resolve(__dirname, 'dist/css'),
-          noErrorOnMissing: true
-        },
         {
           from: path.resolve(__dirname, 'src/assets'),
           to: path.resolve(__dirname, 'dist/assets'),
@@ -114,10 +109,13 @@ export default {
     new HtmlWebpackPlugin({
       template: './public/index.html',
       inject: true,
-      favicon: './public/favicon.png'
+      favicon: './public/favicon.png',
+      minify: !isDevelopment,
+      scriptLoading: 'defer',
     }),
     new MiniCssExtractPlugin({
-      filename: 'css/[name].[contenthash].css',
+      filename: isDevelopment ? 'css/[name].css' : 'css/[name].[contenthash].css',
+      chunkFilename: isDevelopment ? 'css/[id].css' : 'css/[id].[contenthash].css',
     }),
     new ExilonWebpackPlugin()
   ],
