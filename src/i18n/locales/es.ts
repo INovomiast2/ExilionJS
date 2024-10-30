@@ -69,9 +69,9 @@ export default {
     ]
   },
   nav: {
-    features: "Características",
-    code: "Código",
-    testimonials: "Testimonios",
-    docs: "Documentación"
+    docs: "Documentación",
+    examples: "Ejemplos",
+    blog: "Blog",
+    getStarted: "Empezar"
   }
 }; 

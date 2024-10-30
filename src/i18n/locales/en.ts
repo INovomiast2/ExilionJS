@@ -1,5 +1,12 @@
 export default {
+  nav: {
+    docs: "Documentation",
+    examples: "Examples",
+    blog: "Blog",
+    getStarted: "Get Started"
+  },
   hero: {
+    version: "v1.0.0 Beta",
     title: "Modern Web Framework",
     subtitle: "Build blazing-fast web applications",
     description: "Build modern web applications with a framework that combines the best of React, Next.js, and Express in an elegant and easy-to-use solution.",
@@ -67,11 +74,5 @@ export default {
         content: "The routing system and state management are simply brilliant. Exilon is the future of web development."
       }
     ]
-  },
-  nav: {
-    features: "Features",
-    code: "Code",
-    testimonials: "Testimonials",
-    docs: "Documentation"
   }
 }; 

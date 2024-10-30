@@ -26,6 +26,6 @@
         "types": ["node", "webpack-env"],
         "downlevelIteration": true
     },
-    "include": ["src"],
+    "include": ["src", "to_create/app", "to_create/ui", "to_create/sections", "to_create/3d"],
     "exclude": ["node_modules", ".exilon"]
 }

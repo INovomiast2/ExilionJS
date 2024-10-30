@@ -4,21 +4,14 @@ export default {
     "./src/**/*.{js,jsx,ts,tsx}",
     "./public/index.html"
   ],
-  darkMode: 'class',
   theme: {
     extend: {
       colors: {
-        primary: '#3B82F6',
-        secondary: '#8B5CF6',
+        background: '#030014',
       },
       animation: {
-        'shine': 'shine 2s linear infinite',
-      },
-      keyframes: {
-        shine: {
-          'from': { transform: 'translateX(-100%)' },
-          'to': { transform: 'translateX(100%)' },
-        },
+        'float': 'float 6s ease-in-out infinite',
+        'pulse-slow': 'pulse 3s ease-in-out infinite',
       },
     },
   },

@@ -1,9 +1,9 @@
 import React, { Suspense, useEffect, useState } from 'react';
 import { useRouter } from './RouterContext';
 import { AppRouter } from './AppRouter';
-import Loading from '../app/loading';
-import ErrorPage from '../app/error';
-import RootLayout from '../app/layout';
+import Loading from '../../to_create/app/loading';
+import ErrorPage from '../../to_create/app/error';
+import RootLayout from '../../to_create/app/layout';
 
 interface RouteState {
   Component: React.ComponentType<any>;
